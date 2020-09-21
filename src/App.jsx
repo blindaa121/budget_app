@@ -1,10 +1,17 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Balance from './components/Balance';
+import AddTransactions from './components/AddTransactions'
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
+    <div className="container">
+      <div className="app-wrapper">
+        <Header/>
+        <Balance/>
+        <AddTransactions/>
+      </div>
     </div>
   );
 }
