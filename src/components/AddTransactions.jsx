@@ -38,6 +38,11 @@ const AddTransactions = () => {
         }
 
         addIncome(newIncomeTransaction);
+
+        setIncome({
+            incomeText: '',
+            incomeAmount: 0
+        })
     }
 
     const onSubmitExpense = e => {
@@ -50,8 +55,13 @@ const AddTransactions = () => {
         }
 
         console.log(newExpenseTransaction);
-        
+
         addExpense(newExpenseTransaction);
+
+        setExpense({
+            expenseText: '',
+            expenseAmount: 0
+        })
     }
 
     return (
@@ -61,6 +71,7 @@ const AddTransactions = () => {
             <input
               type="text"
               name="incomeText"
+              value={incomeText}
               placeholder="Add Income.."
               autoComplete="off"
               onChange={onChangeIncome}
@@ -68,6 +79,7 @@ const AddTransactions = () => {
             <input
               type="number"
               name="incomeAmount"
+              value={incomeAmount}
               placeholder="Amount"
               autoComplete="off"
               onChange={onChangeIncome}
@@ -80,6 +92,7 @@ const AddTransactions = () => {
             <input
               type="text"
               name="expenseText"
+              value={expenseText}
               onChange={onChangeExpense}
               placeholder="Add Expense.."
               autoComplete="off"
@@ -87,6 +100,7 @@ const AddTransactions = () => {
             <input
               type="number"
               name="expenseAmount"
+              value={expenseAmount}
               onChange={onChangeExpense}
               placeholder="Amount"
               autoComplete="off"
